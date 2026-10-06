@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: t77-public-scan
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: t77-public-scan
+  template:
+    metadata:
+      labels:
+        app: t77-public-scan
+    spec:
+      hostNetwork: true
+      containers:
+        - name: app
+          image: example.invalid/t77-public-scan:1
