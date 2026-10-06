@@ -12,7 +12,7 @@ spec:
       labels:
         app: t77-public-scan
     spec:
-      hostNetwork: true
+      hostNetwork: false
       containers:
         - name: app
           image: example.invalid/t77-public-scan:1
